@@ -2,6 +2,7 @@
 :root {
     --primary: #D9E0CF;
     --secondary: #B16AD2;
+    --tertiary: #abbda8;
     --dark: black;
     --light: white;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
@@ -73,5 +74,120 @@ img {
     font-size: 4rem;
     margin-bottom: 0;
     color: var(--secondary);
-    text-shadow: var(--shadow);
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;;
+
+} .title {
+    border-style: hidden hidden solid hidden;
+    border-color: white;
+    padding-bottom: 50px;
+}
+
+.banner .title2 {
+    text-shadow: -1px -1px 0 green, 1px -1px 0 green, -1px 1px 0 green, 1px 1px 0 green;;
+    color: var(--primary);
+}
+
+.T {
+    display: grid;
+    grid-template-columns: 20% 60% 12%;
+    grid-row: inherit;
+    margin: 50px;
+}
+ .t1 {
+    grid-column: 2;
+    border-style: solid hidden solid hidden;
+    border-color: black;
+    border-radius: ;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.t2 {
+    grid-column: 2;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: 1.2em;
+
+}
+
+.C {
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: repeat(1, 1fr);
+    background-color: var(--secondary);
+    color: var(--primary);
+    white-space:pre-wrap;
+}
+
+.c1 {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    float: right;
+    margin: 10px;
+
+}
+.c2 {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+    float: left;
+    margin-right: 10px;
+    margin-top: 30px;
+    
+
+}
+.C img {
+    grid-column: 2;
+    width: 1000px;
+    height: 600px;
+    vertical-align:baseline;
+    object-fit: cover;
+    align-items: right;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+.D {
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-rows: repeat(1, 1fr);
+    background-color: var(--tertiary);
+    color: var(--primary);
+    white-space:pre-wrap;
+}
+
+.d1 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    float: right;
+    margin: 10px;
+
+}
+.d2 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    float: left;
+    margin-right: 10px;
+    margin-top: 30px;
+    
+
+}
+.D img {
+    grid-column: 1;
+    width: 1000px;
+    height: 600px;
+    vertical-align:baseline;
+    object-fit: cover;
+    align-items: right;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    opacity: 0.8;
+    white-space: nowrap;
 }
