@@ -463,7 +463,97 @@ img {
     padding-bottom: 20px;
 }
 
+/*contact*/
 
+.contact {
+    display: grid;
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 1 1fr;
+    border-style: hidden hidden hidden hidden;
+    border-width: 1px;
+    background-color: var(--secondary);
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0px;
+}
+
+.contactimg {
+    display: block;
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 50px auto;
+
+}
+.boxe { 
+    grid-area: 1/ 1 / 2 / 2;
+    width: 121rem;
+    height: 25rem;
+    background-color: var(--dark);
+    opacity: 0.2;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 25px;
+  }
+.contactinfo {
+    grid-area: 1/ 1 / 2 / 2;
+    display: block;
+    margin: 18rem 18rem auto;
+    text-align: center;
+    white-space: pre-wrap;
+    color: var(--light);
+    text-shadow: var(--shadow);
+}
+
+.contact2 {
+    display: grid;
+    grid-template-columns: 1 1fr;
+    grid-template-rows: 1 1fr;
+    border-style: hidden hidden hidden hidden;
+    border-width: 1px;
+    background-color: var(--tertiary);
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0px;
+}
+
+/*EMAIL*/
+input[type=text], input[type=email], input[type=tel], select, textarea {
+
+    width: 99%;
+    padding: 12px;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: horizontal;
+  }
+  
+  input[type=submit] {
+
+    background-color: var(--tertiary);
+    color: var(--secondary);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: var(--primary)
+  }
+  
+  .email {
+
+    width: 50%;
+    border-radius: 5px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 0px;
+    margin: 1rem auto;
+  }
+
+
+/*footer*/
 footer {
     white-space:inherit;
     margin-top: 0.2rem;
