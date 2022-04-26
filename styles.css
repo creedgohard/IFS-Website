@@ -396,6 +396,120 @@ footer img {
     text-decoration: none;
     border: 0;
     width: 25%;
-    margin: 0 auto;
+    margin: 100px auto;
     border-radius: 25px;
+}
+
+/*Reviews*/
+.Cheadings {
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: var(--secondary);
+    border-style: solid hidden solid hidden;
+    border-color: var(--light);
+    border-width: 1px;
+}
+.R {
+    font-size: 2rem;
+    border-style: solid hidden solid hidden;
+    border-color: black;
+    background-color: var(--secondary);
+    width: 50%;
+    text-align: center;
+    margin: 50px auto;
+
+}
+
+.review {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(50% 50%);
+    border-style: hidden hidden hidden hidden;
+    border-width: 1px;
+    background-color: var(--secondary);
+    width: 100%;
+    height: 93%;
+}
+.review h1 {
+    display: grid;
+    grid-template-rows: 100%;
+    color: var(--light);
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin: 0px auto;
+    text-shadow: var(--shadow);
+    
+}
+
+.r1 {
+    display:grid;
+    grid-template-rows: 100%;
+    grid-row: 2;
+    color: var(--light);
+    text-align: left;
+    grid-column: 1;
+    width: 100%;
+    font-size: 0.9em;
+    white-space:pre-wrap;
+    text-shadow: var(--shadow);
+
+    border-style: solid hidden hidden hidden;
+    border-width: 1px;
+    
+}
+
+.review2 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(50% 50%);
+    border-style: hidden hidden hidden hidden;
+    border-width: 1px;
+    background-color: var(--tertiary);
+    width: 100%;
+    height: 100%;
+}
+.review2 h1 {
+    display: grid;
+    grid-template-rows: 100%;
+    color: var(--light);
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 20px;
+    padding-top: 10px;
+    float: right;
+    padding-right: 60px;
+    text-align: left;
+
+    
+    margin: 1px auto;
+    text-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+
+.r2 {
+    display:grid;
+    grid-template-rows: 100%;
+  
+    color: var(--light);
+    text-align: left;
+    grid-column: 1;
+    width: 100%;
+    font-size: 0.9em;
+    white-space:pre-wrap;
+    text-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: row-reverse;
+
+    border-style: solid hidden hidden hidden;
+    border-width: 1px;
+    
 }
