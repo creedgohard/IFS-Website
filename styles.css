@@ -394,6 +394,8 @@ img {
     border-width: 1px;
   margin-top: 1rem;
 }
+
+/*Headings used for all pages if its needed*/
 .R {
     font-size: 2rem;
     border-style: solid hidden solid hidden;
@@ -402,7 +404,6 @@ img {
     width: 50%;
     text-align: center;
     margin: 5rem auto;
-
 }
 
 .review {
@@ -516,8 +517,7 @@ img {
 }
 
 /*EMAIL*/
-input[type=text], input[type=email], input[type=tel], select, textarea {
-
+input[type=text], input[type=email], input[type=tel], select, textarea {    
     width: 99%;
     padding: 12px;
     border: 1px solid var(--primary);
@@ -542,17 +542,64 @@ input[type=text], input[type=email], input[type=tel], select, textarea {
     background-color: var(--primary)
   }
   
-  .email {
 
-    width: 50%;
-    border-radius: 5px;
-    color: var(--primary);
+
+/*Quote*/
+
+form {
+    display: grid;
+   margin: 1 auto;
+    max-width: 100%;
+    padding: 1rem;
     background-color: var(--secondary);
-    padding: 0px;
-    margin: 1rem auto;
-  }
+    
+  
+}
+.f {
+  display: grid;
+     grid-template-columns: 30% 70%;
+     margin: 20px auto;
 
+ 
 
+}
+
+label {
+   
+    text-align: left;
+    white-space: nowrap;
+    padding-top: 12px;
+    margin-right: 20rem;
+    padding-bottom: 20px;
+    
+    width: 100%;
+    max-width: 100%;
+    white-space:pre-wrap;
+    color: var(--light);
+    text-align: left;
+ 
+}
+input {
+    margin-top: 20px;
+    width: 100px;
+}
+
+.fheadings {
+    font-size: 1rem;
+    border-style: solid hidden solid hidden;
+    border-width: 1px;
+    border-color: black;
+    background-color: var(--tertiary);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.Submit {
+    grid-column: 2;
+    align-items: right;
+}
 /*footer*/
 footer {
     white-space:inherit;
@@ -560,7 +607,7 @@ footer {
     background: var(--tertiary);
     color: var(--light);
     text-align: center;
-    height:15rem;
+    height:18rem;
 
     border-style: solid hidden hidden hidden;
     border-width: 1px;
