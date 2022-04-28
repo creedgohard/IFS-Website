@@ -136,7 +136,6 @@ both put into the same colomns on the center of the page. This is so borders can
     grid-column: 2;
     border-style: solid hidden solid hidden;
     border-color: black;
-    border-radius: ;
     text-align: center;
     font-size: 2rem;
 }
