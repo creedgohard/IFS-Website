@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap');
+/*All colours put inside of a root, so all colours can be changed throughout the whole page without going through different settings.*/
 :root {
     --primary: #D9E0CF;
     --secondary: #B16AD2;
@@ -7,18 +8,23 @@
     --light: white;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
+
+/*Border around whole website*/
 html {
     box-sizing: border-box;
     line-height: 1.4; 
 }
+
+/*Font and page colour, margin also added. This adds a good look and keeps elements within the margin*/
 body {
     font-family: Reem Kufi;
-    background: #E4FCE1;
+    background:var(--primary);
     margin: 0px 20px;
 }
 img {
     max-width: 100%;
 }
+/* Everything on each page is within this wrapper, keeps page within grid css and adds margin*/
 .wrapper {
     display: grid;
     grid-gap: 0px;
@@ -26,7 +32,7 @@ img {
 }
 
 /*Navigation bar*/
-
+/*Grid is used to display nac bar, allows to have them in columns, we have 6 pages so 6 grids with 1 row. This could increase to 7 or 8 with additional text or a logo*/
 .main-nav ul {
     display: grid;
     grid-gap: 0px;
@@ -36,7 +42,7 @@ img {
     grid-template-columns: repeat(6, 1fr);
   
 }
-
+/* Nav bar styling  */
 .main-nav a {
     background: var(--secondary);
     display: block;
@@ -48,12 +54,40 @@ img {
     font-size: 1.1rem;
 }
 
+/* Nav bar hover state, bg colour is changed along with text colour*/
 .main-nav a:hover {
     background: var(--primary);
     color: var(--dark);
 }
+/* This is the heading before staff is displayed. This tag will be used on other pages for headings.*/
+.S {
+    font-size: 2rem;
+    border-style: solid hidden solid hidden;
+    border-color: black;
+    width: 50%;
+    text-align: center;
+    margin: 50px auto;
 
+}
+
+/*Adds a different black border to the heading, left and right borders hidden*/
+.R {
+    font-size: 2rem;
+    border-style: solid hidden solid hidden;
+    border-color: black;
+    background-color: var(--secondary);
+    width: 50%;
+    text-align: center;
+    margin: 5rem auto;
+}
+
+/**Home Page**/
 /*Banner*/
+/* Banner on the home page is styled, background image its size and how objects within are displayed
+    everything is placed in the center using justify content and align items. opacity is given to the image as well as spacing
+    spacing is done with margins and padding.
+    Flex direction set to column to allow text within to be in one.
+    lastly shadow is added to the background img for an appealing effect.*/
 .banner {
     grid-area: banner;
     min-height: 400px;
@@ -69,7 +103,9 @@ img {
     box-shadow: var(--shadow);
     margin-top: 21px;
 }
-
+/* text within banner is edited here.
+    Colours, sizing as well as shadow. They are in different classes so they can seperately be edited.
+    placement is also easier when inside different classes.*/
 .banner h1 {
     font-size: 4rem;
     margin-bottom: 0;
@@ -87,6 +123,9 @@ img {
     color: var(--primary);
 }
 
+/*This is the text underneath the banner on index.html classes of T, t1 and t2.
+Main class of T to put everything inside a grid, allows easier placement for child classes
+both put into the same colomns on the center of the page. This is so borders can be manipulated.*/
 .T {
     display: grid;
     grid-template-columns: 20% 60% 12%;
@@ -109,7 +148,8 @@ img {
     font-size: 1.2em;
 
 }
-
+/* parent of C to put items within a grid, with this image could be put into one column and text within the other.
+child classes are put into seperate columns and same rows. */
 .C {
     display: grid;
     grid-template-columns:50% 50%;
@@ -150,7 +190,7 @@ img {
     opacity: 0.8;
     white-space: nowrap;
 }
-
+/* Same as C classes however they are reversed.*/
 .D {
     display: grid;
     grid-template-columns:50% 50%;
@@ -193,8 +233,8 @@ img {
 }
 
 
-/* About Page*/
-
+/**About Page**/
+/*Banner is setup same as done on index.html however without the background image.*/
 .banner2 {
     
     grid-area: banner;
@@ -209,7 +249,7 @@ img {
     align-items: center;
     margin-top: 21px;
 }
-
+/*Text within the banner*/
 .banner2 .b {
     grid-column: 2/3;
     font-size: 3rem;
@@ -222,7 +262,8 @@ img {
     gap: 2px;
     text-align: center;
     
-  
+/* Parent class, and p tag within manipulated so placement is correct
+white space is used to allow text to look as it does within html*/
 }
 .BT p {
     display: grid;
@@ -234,16 +275,10 @@ img {
     margin-top: -3rem;
 }
 
-.S {
-    font-size: 2rem;
-    border-style: solid hidden solid hidden;
-    border-color: black;
-    width: 50%;
-    text-align: center;
-    margin: 50px auto;
-
-}
-
+/* This tag allows the manipulation of the box around the text and the image. 
+Columns allow for easy placement within the box.
+sizes are also changed using width and height.
+20% is for the images and 80% for the text next to the image. */
 .staff {
     display: grid;
     grid-template-columns: 20% 80%;
@@ -275,7 +310,8 @@ img {
     text-align: left;
     white-space:pre-wrap;
 }
-
+/*Same as staff class however margins are added to change direction of box.
+more columns are also added so the boxes can be placed in a different place.*/
 .staff2 {
     display: grid;
     grid-template-columns: 0% 20% 80%;
@@ -311,7 +347,70 @@ img {
     white-space:pre-wrap;
 }
 
-/*Help page*/
+/**Quote Page**/
+ /* This code changes how the form looks.
+ It changes size and placement. Everything is within this form*/
+ form {
+    display: grid;
+   margin: 1 auto;
+    max-width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary);
+    
+  
+}
+/*A div is put within the form, this is done so placemen can be easily changed.
+Adding a grid makes it so text and box sizes and placement can be manipulated.s*/
+.f {
+  display: grid;
+     grid-template-columns: 30% 70%;
+     margin: 20px auto;
+
+ 
+
+}
+/*Changes how the label and input tags look, adding margins and padding as well as how the text looks.*/
+label {
+   
+    text-align: left;
+    white-space: nowrap;
+    padding-top: 12px;
+    margin-right: 20rem;
+    padding-bottom: 20px;
+    
+    width: 100%;
+    max-width: 100%;
+    white-space:pre-wrap;
+    color: var(--light);
+    text-align: left;
+ 
+}
+input {
+    margin-top: 20px;
+    width: 100px;
+}
+/*This changes the headings within the form, it acts as a seperator before each new part of the form*/
+.fheadings {
+    font-size: 1rem;
+    border-style: solid hidden solid hidden;
+    border-width: 1px;
+    border-color: black;
+    background-color: var(--tertiary);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+}
+/*Changes the submit box.*/
+.Submit {
+    grid-column: 2;
+    align-items: right;
+}
+
+/**Help page**/
+
+/* faq section put within a grid for easy placement of objects within.
+shape and placement is to the left side, done by using width and height*/
 .faq {
     display: grid;
     grid-template-columns: 100%;
@@ -322,7 +421,7 @@ img {
     width: 70%;
     height: 93%;
 }
-
+/*This changes the text within the faq section*/
 .faq h1 {
     color: var(--light);
     text-align: center;
@@ -340,7 +439,8 @@ img {
     text-align: center;
     white-space:pre-wrap;
 }
-
+/*same as faq section however this is placed to the right side instead of left.
+Backgound colour has also been changed.*/
 .faq2 {
     display: grid;
     grid-template-columns: 100%;
@@ -371,6 +471,8 @@ img {
     text-align: center;
     white-space:pre-wrap;
 }
+/*Button at the bottom of the page.
+This places it in the middle and gives it colour and size.*/
 .btn {
     background-color: var(--secondary);
     color: var(--light);
@@ -384,7 +486,9 @@ img {
     border-radius: 25px;
 }
 
-/*Reviews*/
+/**Review Page**/
+/* This is also used for headings. Used on a few different pages.
+This adds a different background colour*/
 .Cheadings {
     display: grid;
     grid-template-columns: 100%;
@@ -395,17 +499,10 @@ img {
   margin-top: 1rem;
 }
 
-/*Headings used for all pages if its needed*/
-.R {
-    font-size: 2rem;
-    border-style: solid hidden solid hidden;
-    border-color: black;
-    background-color: var(--secondary);
-    width: 50%;
-    text-align: center;
-    margin: 5rem auto;
-}
 
+
+/* This edits the review section within a grid. Makes it so text can be placed in two different rows with grid.
+width is at 100% but height is limited.*/
 .review {
     display: grid;
     grid-template-columns: 100%;
@@ -417,6 +514,7 @@ img {
     height: 93%;
     padding-bottom: 20px;
 }
+/* re1 and r1 edit text within box.*/
 .re1 {
     display: grid;
     grid-template-rows: 100%;
@@ -451,7 +549,7 @@ img {
     border-style: solid hidden hidden hidden;
     border-width: 1px;   
 }
-
+/*Same as review class, however background colour is changed.*/
 .review2 {
     display: grid;
     grid-template-columns: 100%;
@@ -464,8 +562,8 @@ img {
     padding-bottom: 20px;
 }
 
-/*contact*/
-
+/**Contact Page**/
+/*This class is to edit the box, changes colour and size, as well as how things are placed within.*/
 .contact {
     display: grid;
     grid-template-columns: 1 1fr;
@@ -477,13 +575,15 @@ img {
     height: 100%;
     padding-bottom: 0px;
 }
-
+/*manipulates the image wihin contact class.*/
 .contactimg {
     display: block;
     grid-area: 1 / 1 / 2 / 2;
     margin: 50px auto;
 
 }
+
+/* A transparent box is added around the content within the grids. They are all placed in the same grid column*/
 .boxe { 
     grid-area: 1/ 1 / 2 / 2;
     width: 121rem;
@@ -503,7 +603,7 @@ img {
     color: var(--light);
     text-shadow: var(--shadow);
 }
-
+/* Same as contact class however colour is changed.*/
 .contact2 {
     display: grid;
     grid-template-columns: 1 1fr;
@@ -516,7 +616,8 @@ img {
     padding-bottom: 0px;
 }
 
-/*EMAIL*/
+/*This is for the form, to submit an email request. Black box couldn't be placed over this section,
+this is because interacting with the form is disabled when done so.*/
 input[type=text], input[type=email], input[type=tel], select, textarea {    
     width: 99%;
     padding: 12px;
@@ -543,64 +644,7 @@ input[type=text], input[type=email], input[type=tel], select, textarea {
   }
   
 
-
-/*Quote*/
-
-form {
-    display: grid;
-   margin: 1 auto;
-    max-width: 100%;
-    padding: 1rem;
-    background-color: var(--secondary);
-    
-  
-}
-.f {
-  display: grid;
-     grid-template-columns: 30% 70%;
-     margin: 20px auto;
-
- 
-
-}
-
-label {
-   
-    text-align: left;
-    white-space: nowrap;
-    padding-top: 12px;
-    margin-right: 20rem;
-    padding-bottom: 20px;
-    
-    width: 100%;
-    max-width: 100%;
-    white-space:pre-wrap;
-    color: var(--light);
-    text-align: left;
- 
-}
-input {
-    margin-top: 20px;
-    width: 100px;
-}
-
-.fheadings {
-    font-size: 1rem;
-    border-style: solid hidden solid hidden;
-    border-width: 1px;
-    border-color: black;
-    background-color: var(--tertiary);
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-
-}
-
-.Submit {
-    grid-column: 2;
-    align-items: right;
-}
-/*footer*/
+/**Footer**/
 footer {
     white-space:inherit;
     margin-top: 0.2rem;
