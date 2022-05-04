@@ -750,10 +750,19 @@ footer img {
     height: 90vw;
     width: 60vw;
     max-width: 100%;
+    
   }
   .contactinfo {
       padding-top: 10px;
       font-size: 1em;
+      margin: 18em 120px auto;
   }
+
+  .contactimg {
+    grid-area: 1 / 1 / 2 / 2;
+    margin: 50px 120px auto;
+    width: 50%;
+
+}
 
 }
