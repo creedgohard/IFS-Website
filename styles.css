@@ -364,24 +364,24 @@ more columns are also added so the boxes can be placed in a different place.*/
 /*A div is put within the form, this is done so placemen can be easily changed.
 Adding a grid makes it so text and box sizes and placement can be manipulated.s*/
 .f {
-  display: grid;
+    display: grid;
      grid-template-columns: 30% 70%;
      margin: 20px auto;
-
+    max-width: 100%;
+    width: 33vw;
  
 
 }
 /*Changes how the label and input tags look, adding margins and padding as well as how the text looks.*/
 label {
-   
+    float: left;
     text-align: left;
     white-space: nowrap;
+    word-wrap: break-word;
     padding-top: 12px;
-    margin-right: 20rem;
     padding-bottom: 20px;
-    
-    width: 100%;
     max-width: 100%;
+    text-overflow: inherit;
     white-space:pre-wrap;
     color: var(--light);
     text-align: left;
@@ -389,7 +389,7 @@ label {
 }
 input {
     margin-top: 20px;
-    width: 100px;
+    max-width: 100%;
 }
 /*This changes the headings within the form, it acts as a seperator before each new part of the form*/
 .fheadings {
@@ -763,6 +763,11 @@ footer img {
     margin: 50px 120px auto;
     width: 50%;
 
+}
+
+input {
+    margin-top: 0px;
+    width: 10%;
 }
 
 }
